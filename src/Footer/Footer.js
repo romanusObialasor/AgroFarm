@@ -112,6 +112,7 @@ const Write = styled.div`
   margin-top: 14px;
   max-width: 320px;
   font-size: 14px;
+  line-height: 28px;
   text-align: ${({ txtA }) => (txtA ? "center" : "justify")};
   font-weight: 500;
   @media screen and (max-width: 768px) {
@@ -155,6 +156,7 @@ const List = styled.div`
 `;
 
 const Text = styled.div`
+  line-height: 28px;
   max-width: 250px;
   font-size: 15px;
   margin-top: ${({ txtA }) => (txtA ? "40px" : "unset")};
