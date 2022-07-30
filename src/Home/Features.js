@@ -52,6 +52,10 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    position: unset;
+  }
 `;
 
 const Box = styled.div`
@@ -66,6 +70,10 @@ const Box = styled.div`
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
   position: relative;
   margin: 0 35px;
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+    width: 90%;
+  }
 `;
 
 const Head = styled.div`

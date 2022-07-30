@@ -4,26 +4,28 @@ import Features from "./Features";
 
 const Home = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Holder>
-          <Text>
-            Agriculture <i>&</i> Organic <br />
-            Farm Product For You
-          </Text>
-          <SubText>
-            Both rest of know draw fond post as. It agreement defective to{" "}
-            <br />
-            excellent. Feebly do engage of narrow. Extensive repulsive{" "}
-          </SubText>
-          <Button>
-            <ButtonText>Discover more</ButtonText>
-            <span />
-          </Button>
-        </Holder>
-      </Wrapper>
-      <Features />
-    </Container>
+    <Main id="home">
+      <Container>
+        <Wrapper>
+          <Holder>
+            <Text>
+              Agriculture <i>&</i> Organic <br />
+              Farm Product For You
+            </Text>
+            <SubText>
+              Both rest of know draw fond post as. It agreement defective to{" "}
+              <br />
+              excellent. Feebly do engage of narrow. Extensive repulsive{" "}
+            </SubText>
+            <Button>
+              <ButtonText>Discover more</ButtonText>
+              <span />
+            </Button>
+          </Holder>
+        </Wrapper>
+        <Features />
+      </Container>
+    </Main>
   );
 };
 
@@ -46,12 +48,17 @@ const Wrapper = styled.div`
   color: white;
   display: flex;
   align-items: center;
-  /* justify-content: flex-end; */
 `;
 
 const Holder = styled.div`
-  /* margin-bottom: 100px; */
   margin-left: 80px;
+  @media screen and (max-width: 768px) {
+    margin-left: 20px;
+    margin-right: 20px;
+    br {
+      display: none;
+    }
+  }
 `;
 
 const Text = styled.div`
@@ -63,6 +70,9 @@ const Text = styled.div`
   font-family: "Oswald", sans-serif;
   i {
     color: #4bae46;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 40px;
   }
 `;
 
@@ -90,7 +100,6 @@ const Button = styled.div`
     width: 1px;
     height: 1px;
     transition: all 350ms;
-    /* position: absolute; */
     margin-top: -30px;
     margin-left: -100px;
     border-radius: 100%;
@@ -108,8 +117,10 @@ const ButtonText = styled.div`
   z-index: 100;
 `;
 
-// const Container = styled.div``;
-
-// const Container = styled.div``;
-
-// const Container = styled.div``;
+const Main = styled.div`
+  width: 100%;
+  background: red;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+`;

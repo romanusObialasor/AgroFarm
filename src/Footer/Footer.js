@@ -2,15 +2,16 @@ import React from "react";
 import { AiOutlineInstagram, AiOutlineTwitter } from "react-icons/ai";
 import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import styled from "styled-components";
+import { animateScroll as scroll, Link } from "react-scroll";
 
-const Footer = ({ txtA }) => {
+const Footer = () => {
   return (
-    <Container txtA={txtA}>
-      <Left txtA={txtA}>
+    <Container>
+      <Left>
         <Logo src="/assets/logo.png" />
-        <Write txtA={txtA}>
+        <Write>
           oth rest of know draw fond post as. It agreement defective to
-          excellent. Feebly do engage of narrow. Extensive repulsive belonging
+          excellent. Feeby do engage of narrow. Extensive repulsive belonging
           depending if promotion be zealously as
         </Write>
         <Icon>
@@ -28,19 +29,76 @@ const Footer = ({ txtA }) => {
           </IconHolder>
         </Icon>
       </Left>
-      <Right txtA={txtA}>
-        <ListHolder txtA={txtA}>
+      <Right>
+        <ListHolder>
           <ListHead>Companies</ListHead>
           <Lists>
-            <List>About us</List>
-            <List>Career</List>
-            <List>Leadership</List>
-            <List>Partners</List>
-            <List>Press</List>
-            <List>Contact us</List>
+            <Link
+              offset={-130}
+              activeClass="active"
+              to="home"
+              smooth={true}
+              duration={500}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <List>Home</List>
+            </Link>
+            <Link
+              activeClass="active"
+              to="about"
+              smooth={true}
+              duration={500}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <List>About</List>
+            </Link>
+            <Link
+              activeClass="active"
+              to="services"
+              smooth={true}
+              duration={500}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <List>Services</List>
+            </Link>
+            <Link
+              offset={-30}
+              activeClass="active"
+              to="projects"
+              smooth={true}
+              duration={500}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <List>Projects</List>
+            </Link>
+            <Link
+              offset={-50}
+              activeClass="active"
+              to="contact"
+              smooth={true}
+              duration={500}
+              style={{
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <List>Contact us</List>
+            </Link>
           </Lists>
         </ListHolder>
-        <ListHolder txtA={txtA}>
+        <ListHolder>
           <ListHead>Resources</ListHead>
           <Lists>
             <List>WhyOfficeSpace</List>
@@ -49,7 +107,7 @@ const Footer = ({ txtA }) => {
             <List>Guilds</List>
           </Lists>
         </ListHolder>
-        <Text txtA={txtA}>
+        <Text>
           Copyright
           <br /> @2022 Surprise steepest recurred landlord mr wandered amounted
           of. Continuing devonshire but considered its. Rose
@@ -65,8 +123,6 @@ const Container = styled.div`
   height: 50vh;
   display: flex;
   margin-top: 20px;
-  flex-direction: ${({ txtA }) => (txtA ? "column" : "unset")};
-  align-items: ${({ txtA }) => (txtA ? "center" : "unset")};
   padding: 0px 80px;
   justify-content: space-between;
   background: #24231d;
@@ -75,14 +131,16 @@ const Container = styled.div`
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    height: auto;
+    padding: 0 10px;
+    padding-bottom: 20px;
   }
 `;
 
 const Left = styled.div`
-  text-align: ${({ txtA }) => (txtA ? "center" : "unset")};
   display: flex;
   flex-direction: column;
-  align-items: ${({ txtA }) => (txtA ? "center" : "flex-start")};
+  align-items: flex-start;
   margin-top: 50px;
   @media screen and (max-width: 768px) {
     text-align: center;
@@ -93,9 +151,6 @@ const Left = styled.div`
 const Right = styled.div`
   display: flex;
   margin-top: 50px;
-  flex-direction: ${({ txtA }) => (txtA ? "column" : "unset")};
-  align-items: ${({ txtA }) => (txtA ? "center" : "unset")};
-  text-align: ${({ txtA }) => (txtA ? "center" : "unset")};
   @media screen and (max-width: 768px) {
     text-align: center;
     align-items: center;
@@ -113,7 +168,6 @@ const Write = styled.div`
   max-width: 320px;
   font-size: 14px;
   line-height: 28px;
-  text-align: ${({ txtA }) => (txtA ? "center" : "justify")};
   font-weight: 500;
   @media screen and (max-width: 768px) {
     text-align: center;
@@ -127,8 +181,7 @@ const Icon = styled.div`
 `;
 
 const ListHolder = styled.div`
-  margin-right: ${({ txtA }) => (txtA ? "unset" : "60px")};
-  margin-top: ${({ txtA }) => (txtA ? "40px" : "unset")};
+  margin-right: 60px;
   @media screen and (max-width: 768px) {
     margin-right: unset;
     margin-top: 40px;
@@ -159,7 +212,6 @@ const Text = styled.div`
   line-height: 28px;
   max-width: 250px;
   font-size: 15px;
-  margin-top: ${({ txtA }) => (txtA ? "40px" : "unset")};
   @media screen and (max-width: 768px) {
     margin-top: 40px;
   }
@@ -181,17 +233,3 @@ const IconHolder = styled.div`
     background: #4bae46;
   }
 `;
-
-// const Container = styled.div``
-
-// const Container = styled.div``
-
-// const Container = styled.div``
-
-// const Container = styled.div``
-
-// const Container = styled.div``
-
-// const Container = styled.div``
-
-// const Container = styled.div``

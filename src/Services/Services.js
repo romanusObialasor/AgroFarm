@@ -7,7 +7,7 @@ import { RiMentalHealthLine } from "react-icons/ri";
 
 const Services = () => {
   return (
-    <Container>
+    <Container id="services">
       <Head>
         <Line />
         <span>Our Services</span>
@@ -114,6 +114,9 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   margin-top: 100px;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  } ;
 `;
 
 const Head = styled.div`
@@ -123,6 +126,9 @@ const Head = styled.div`
   font-size: 18px;
   span {
     margin-left: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
   }
 `;
 
@@ -137,11 +143,19 @@ const MidHead = styled.div`
   font-size: 48px;
   font-weight: 800;
   line-height: 58px;
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+  } ;
 `;
 
 const Cards = styled.div`
   display: flex;
   margin-top: 50px;
+  flex-wrap: wrap;
+  @media screen and (max-width: 768px) {
+    margin-top: 30px;
+    justify-content: center;
+  } ;
 `;
 
 const CardHolder = styled.div`
@@ -162,6 +176,9 @@ const CardHolder = styled.div`
       bottom: -38px;
     }
   }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 70px;
+  } ;
 `;
 
 const ImageHolder = styled.div`
@@ -258,7 +275,3 @@ const ButtonText = styled.div`
   position: absolute;
   z-index: 100;
 `;
-
-// const Container = styled.div``;
-
-// const Container = styled.div``;

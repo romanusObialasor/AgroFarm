@@ -4,7 +4,7 @@ import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const Projects = () => {
   return (
-    <Container>
+    <Container id="projects">
       <Head>
         <Line />
         <span>Get to konw us</span>
@@ -114,6 +114,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-top: 100px;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
 `;
 
 const Head = styled.div`
@@ -137,11 +140,22 @@ const MidHead = styled.div`
   font-size: 48px;
   font-weight: 800;
   line-height: 58px;
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    width: 90%;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 1.3;
+  } ;
 `;
 
 const ProjectCards = styled.div`
   display: flex;
   margin-top: 50px;
+  flex-wrap: wrap;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const ProjectCard = styled.div`
@@ -159,6 +173,10 @@ const ProjectCard = styled.div`
       opacity: 0.6;
       margin: 0;
     }
+  }
+  @media screen and (max-width: 768px) {
+    margin-bottom: 30px;
+    height: 400px;
   }
 `;
 
@@ -224,7 +242,3 @@ const Text = styled.div`
   margin-bottom: -60px;
   opacity: 0;
 `;
-
-// const Container = styled.div``;
-
-// const Container = styled.div``;

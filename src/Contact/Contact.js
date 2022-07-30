@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const Contact = () => {
   return (
-    <Container>
+    <Container id="contact">
       <Head>
         <Line />
         <span>Get to konw us</span>
@@ -59,7 +59,7 @@ const Contact = () => {
             cols="20"
           />
           <Button type="submit">
-            <ButtonText>Discover more</ButtonText>
+            <ButtonText>Send Message</ButtonText>
             <span />
           </Button>
         </Right>
@@ -80,7 +80,7 @@ const Container = styled.div`
   margin-top: 150px;
 
   @media screen and (max-width: 768px) {
-    padding-top: 20px;
+    margin-top: 50px;
   }
 `;
 
@@ -105,6 +105,12 @@ const MidHead = styled.div`
   font-size: 48px;
   font-weight: 800;
   line-height: 58px;
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    width: 90%;
+    line-height: 1.5;
+    text-align: center;
+  }
 `;
 
 const Main = styled.div`
@@ -178,10 +184,10 @@ const Right = styled.form`
   margin-left: 60px;
   @media screen and (max-width: 1024px) {
     margin-left: unset;
-    margin-left: 20px;
   }
   @media screen and (max-width: 768px) {
     width: 80%;
+    margin-top: 20px;
   }
   @media screen and (max-width: 425px) {
     width: 90%;

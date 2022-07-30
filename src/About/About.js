@@ -4,7 +4,7 @@ import { BsCheckLg } from "react-icons/bs";
 
 const About = () => {
   return (
-    <Container>
+    <Container id="about">
       <Right>
         <Image src="/assets/back1.jpg" />
         <Svg src="/assets/plants-01.svg" />
@@ -13,7 +13,7 @@ const About = () => {
       <Left>
         <Head>
           <Line />
-          <span>Get to konw us</span>
+          <span>Get to know us</span>
         </Head>
         <MidHead>The Best Agriculture Market</MidHead>
         <Text>
@@ -62,6 +62,11 @@ const Container = styled.div`
   margin-top: 300px;
   display: flex;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+    margin-top: 850px;
+  }
 `;
 
 const Right = styled.div`
@@ -70,6 +75,11 @@ const Right = styled.div`
   border-radius: 0 20px 20px 0;
   position: relative;
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    height: 300px;
+    width: 90%;
+    border-radius: 20px;
+  } ;
 `;
 
 const Image = styled.img`
@@ -99,6 +109,11 @@ const Svg1 = styled.img`
 const Left = styled.div`
   margin-left: 120px;
   width: 40%;
+  @media screen and (max-width: 768px) {
+    width: 90%;
+    margin-left: 0;
+    margin-top: 40px;
+  }
 `;
 
 const Head = styled.div`
@@ -122,6 +137,10 @@ const MidHead = styled.div`
   font-size: 48px;
   font-weight: 800;
   line-height: 58px;
+  @media screen and (max-width: 768px) {
+    font-size: 30px;
+    line-height: 1.2;
+  }
 `;
 
 const Text = styled.div`
@@ -130,6 +149,9 @@ const Text = styled.div`
   font-weight: 700;
   font-size: 20px;
   color: #4baf47;
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const Text2 = styled.div`
@@ -199,11 +221,3 @@ const ButtonText = styled.div`
   position: absolute;
   z-index: 100;
 `;
-
-// const Container = styled.div``;
-
-// const Container = styled.div``;
-
-// const Container = styled.div``;
-
-// const Container = styled.div``;
