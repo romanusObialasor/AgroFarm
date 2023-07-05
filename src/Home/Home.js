@@ -119,7 +119,7 @@ const ButtonText = styled.div`
 
 const Main = styled.div`
   width: 100%;
-  background: red;
+  background: #0a4907;
   @media screen and (max-width: 768px) {
     height: auto;
   }
